@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 candidates = ((2..9).to_a + ("a".."z").to_a + ("A".."Z").to_a)
-bad_characters = [ "i", "I", "l", "o", "O" ]
+bad_characters = [ "i", "I", "l", "L", "o", "O" ]
 
 cnt = 0
 while cnt < 9
