@@ -9,6 +9,7 @@ elsif ARGV[0] == "-n"
   NUM = ARGV[1].to_i
 else
   puts "Invalid argument."
+  exit
 end
 
 cnt = 0
