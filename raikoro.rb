@@ -5,7 +5,7 @@ bad_characters = [ "i", "I", "l", "L", "o", "O" ]
 
 if !ARGV[0]
   NUM = 9
-elsif ARGV[0] == "-n"
+elsif ARGV[0] == "-n" || ARGV[0] == "--number"
   NUM = ARGV[1].to_i
 else
   puts "Invalid argument."
