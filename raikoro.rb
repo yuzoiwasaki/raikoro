@@ -1,17 +1,17 @@
 #!/usr/bin/env ruby
+require 'optparse'
 
 candidates = ((2..9).to_a + ("a".."z").to_a + ("A".."Z").to_a)
 bad_characters = [ "i", "I", "l", "L", "o", "O" ]
 
-if !ARGV[0]
-  NUM = 9
-elsif ARGV[0] == "-n" || ARGV[0] == "--number"
-  NUM = ARGV[1].to_i
-else
-  puts "Invalid argument."
-  exit
+OptionParser.new do |opt|
+  opt.on('-n', '--number=VALUE') {|v|
+    NUM = v.to_i
+  }
+  opt.parse!(ARGV)
 end
 
+NUM ||= 8
 cnt = 0
 
 while cnt < NUM
