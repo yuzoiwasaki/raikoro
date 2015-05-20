@@ -11,7 +11,7 @@ OptionParser.new do |opt|
   opt.parse!(ARGV)
 end
 
-NUM ||= 8
+NUM ||= 9
 cnt = 0
 
 while cnt < NUM
